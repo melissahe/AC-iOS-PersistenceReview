@@ -14,6 +14,7 @@ class UserDefaultsHelper {
     private init() {}
     static let manager = UserDefaultsHelper()
     private let numberOfLoadsKey = "numberOfLoadedImages"
+    private let nameKey = "savedName"
     
     func incrementNumberOfLoadedImages() {
         //gives you the number of times you've stored stuff
@@ -24,6 +25,14 @@ class UserDefaultsHelper {
     
     func getNumberOfImageLoads() -> Int {
         return UserDefaults.standard.integer(forKey: numberOfLoadsKey)
+    }
+    
+    func saveName(_ name: String) {
+        UserDefaults.standard.set(name, forKey: nameKey)
+    }
+    
+    func getName() -> String? {
+        return UserDefaults.standard.value(forKey: nameKey) as? String
     }
     
 }

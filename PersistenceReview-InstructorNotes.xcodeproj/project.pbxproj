@@ -16,6 +16,9 @@
 		5455408F1FFC88B400F32B51 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5455408E1FFC88B400F32B51 /* NetworkHelper.swift */; };
 		545540921FFC894300F32B51 /* NasaImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545540911FFC894300F32B51 /* NasaImage.swift */; };
 		545540941FFC8B0500F32B51 /* ImageAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545540931FFC8B0500F32B51 /* ImageAPIClient.swift */; };
+		813E12EE1FFD6F0400D35457 /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E12ED1FFD6F0400D35457 /* FileManagerHelper.swift */; };
+		813E12F01FFD743500D35457 /* ImagesHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E12EF1FFD743500D35457 /* ImagesHistoryViewController.swift */; };
+		813E12F21FFD78D600D35457 /* NSCacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E12F11FFD78D600D35457 /* NSCacheHelper.swift */; };
 		81ABAAC81FFD647F009F386E /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABAAC71FFD647F009F386E /* UserDefaultsHelper.swift */; };
 		81ABAACA1FFD6744009F386E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABAAC91FFD6744009F386E /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +35,9 @@
 		5455408E1FFC88B400F32B51 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		545540911FFC894300F32B51 /* NasaImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaImage.swift; sourceTree = "<group>"; };
 		545540931FFC8B0500F32B51 /* ImageAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIClient.swift; sourceTree = "<group>"; };
+		813E12ED1FFD6F0400D35457 /* FileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHelper.swift; sourceTree = "<group>"; };
+		813E12EF1FFD743500D35457 /* ImagesHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesHistoryViewController.swift; sourceTree = "<group>"; };
+		813E12F11FFD78D600D35457 /* NSCacheHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCacheHelper.swift; sourceTree = "<group>"; };
 		81ABAAC71FFD647F009F386E /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		81ABAAC91FFD6744009F386E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +90,7 @@
 				5455407B1FFC420E00F32B51 /* NasaImageViewController.swift */,
 				5455408B1FFC83E500F32B51 /* FavoriteImagesViewController.swift */,
 				81ABAAC91FFD6744009F386E /* SettingsViewController.swift */,
+				813E12EF1FFD743500D35457 /* ImagesHistoryViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -102,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				81ABAAC71FFD647F009F386E /* UserDefaultsHelper.swift */,
+				813E12ED1FFD6F0400D35457 /* FileManagerHelper.swift */,
+				813E12F11FFD78D600D35457 /* NSCacheHelper.swift */,
 			);
 			path = "Persistence Models";
 			sourceTree = "<group>";
@@ -179,13 +188,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				81ABAAC81FFD647F009F386E /* UserDefaultsHelper.swift in Sources */,
+				813E12F01FFD743500D35457 /* ImagesHistoryViewController.swift in Sources */,
 				5455408F1FFC88B400F32B51 /* NetworkHelper.swift in Sources */,
 				5455408C1FFC83E500F32B51 /* FavoriteImagesViewController.swift in Sources */,
 				545540921FFC894300F32B51 /* NasaImage.swift in Sources */,
 				545540941FFC8B0500F32B51 /* ImageAPIClient.swift in Sources */,
 				5455407C1FFC420E00F32B51 /* NasaImageViewController.swift in Sources */,
+				813E12F21FFD78D600D35457 /* NSCacheHelper.swift in Sources */,
 				5455407A1FFC420E00F32B51 /* AppDelegate.swift in Sources */,
 				81ABAACA1FFD6744009F386E /* SettingsViewController.swift in Sources */,
+				813E12EE1FFD6F0400D35457 /* FileManagerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,11 +37,16 @@ class NasaImageViewController: UIViewController {
         let str = "https://api.nasa.gov/planetary/apod?date=\(date)&api_key=\(key)"
         NasaAPIClient.shared.getNasaImage(from: str,
                                           completionHandler: {
+                                            
+                                            FileManagerHelper.manager.addNew(newNasaImage: $0)
+                                           
+                                            let nasaImage = $0
                                             ImageAPIClient.manager.loadImage(from: $0.url,
                                                                              completionHandler: {self.imageView.image = $0
                                                                                 self.imageView.setNeedsLayout()
                                                                                 UserDefaultsHelper.manager.incrementNumberOfLoadedImages()
-                                                                                
+                                                   
+                                                  FileManagerHelper.manager.saveImage($0, named: nasaImage.url)
                                             },
                                                                              errorHandler: {print($0)})
                                             

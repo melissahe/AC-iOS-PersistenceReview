@@ -8,8 +8,13 @@
 
 import Foundation
 
-struct NasaImage: Codable {
+struct NasaImage: Codable, Equatable {
+    let title: String
     let url: String
+    
+    static func ==(lhs: NasaImage, rhs: NasaImage) -> Bool {
+        return lhs.title == rhs.title && lhs.url == rhs.url
+    }
 }
 
 struct NasaAPIClient {

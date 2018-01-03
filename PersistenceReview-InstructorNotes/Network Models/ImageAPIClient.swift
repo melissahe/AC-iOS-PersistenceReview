@@ -15,8 +15,20 @@ class ImageAPIClient {
                    completionHandler: @escaping (UIImage) -> Void,
                    errorHandler: @escaping (Error) -> Void) {
         guard let url = URL(string: urlStr) else {return}
+        
+        if let savedImage = FileManagerHelper.manager.getImage(named: urlStr) {
+            completionHandler(savedImage)
+            return
+        }
+        
+        if let cachedImage = NSCacheHelper.manager.getImage(withKey: urlStr) {
+            completionHandler(cachedImage)
+            return
+        }
+        
         let completion = {(data: Data) in
             guard let onlineImage = UIImage(data: data) else {return}
+            NSCacheHelper.manager.addImage(onlineImage, withURLString: urlStr)
             completionHandler(onlineImage)
         }
         NetworkHelper.manager.performDataTask(with: URLRequest(url: url),
