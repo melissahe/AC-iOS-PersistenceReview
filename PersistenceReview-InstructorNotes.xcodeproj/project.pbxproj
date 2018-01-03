@@ -16,6 +16,8 @@
 		5455408F1FFC88B400F32B51 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5455408E1FFC88B400F32B51 /* NetworkHelper.swift */; };
 		545540921FFC894300F32B51 /* NasaImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545540911FFC894300F32B51 /* NasaImage.swift */; };
 		545540941FFC8B0500F32B51 /* ImageAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545540931FFC8B0500F32B51 /* ImageAPIClient.swift */; };
+		81ABAAC81FFD647F009F386E /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABAAC71FFD647F009F386E /* UserDefaultsHelper.swift */; };
+		81ABAACA1FFD6744009F386E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABAAC91FFD6744009F386E /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		5455408E1FFC88B400F32B51 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		545540911FFC894300F32B51 /* NasaImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaImage.swift; sourceTree = "<group>"; };
 		545540931FFC8B0500F32B51 /* ImageAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIClient.swift; sourceTree = "<group>"; };
+		81ABAAC71FFD647F009F386E /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		81ABAAC91FFD6744009F386E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				545540791FFC420E00F32B51 /* AppDelegate.swift */,
+				81ABAAC61FFD646C009F386E /* Persistence Models */,
 				545540901FFC891E00F32B51 /* Network Models */,
 				5455408D1FFC86F000F32B51 /* View Controllers */,
 				5455407D1FFC420E00F32B51 /* Main.storyboard */,
@@ -78,6 +83,7 @@
 			children = (
 				5455407B1FFC420E00F32B51 /* NasaImageViewController.swift */,
 				5455408B1FFC83E500F32B51 /* FavoriteImagesViewController.swift */,
+				81ABAAC91FFD6744009F386E /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -90,6 +96,14 @@
 				545540931FFC8B0500F32B51 /* ImageAPIClient.swift */,
 			);
 			path = "Network Models";
+			sourceTree = "<group>";
+		};
+		81ABAAC61FFD646C009F386E /* Persistence Models */ = {
+			isa = PBXGroup;
+			children = (
+				81ABAAC71FFD647F009F386E /* UserDefaultsHelper.swift */,
+			);
+			path = "Persistence Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,12 +178,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81ABAAC81FFD647F009F386E /* UserDefaultsHelper.swift in Sources */,
 				5455408F1FFC88B400F32B51 /* NetworkHelper.swift in Sources */,
 				5455408C1FFC83E500F32B51 /* FavoriteImagesViewController.swift in Sources */,
 				545540921FFC894300F32B51 /* NasaImage.swift in Sources */,
 				545540941FFC8B0500F32B51 /* ImageAPIClient.swift in Sources */,
 				5455407C1FFC420E00F32B51 /* NasaImageViewController.swift in Sources */,
 				5455407A1FFC420E00F32B51 /* AppDelegate.swift in Sources */,
+				81ABAACA1FFD6744009F386E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "PersistenceReview-InstructorNotes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "c4q.PersistenceReview-InstructorNotes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -322,6 +339,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "PersistenceReview-InstructorNotes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "c4q.PersistenceReview-InstructorNotes";
 				PRODUCT_NAME = "$(TARGET_NAME)";

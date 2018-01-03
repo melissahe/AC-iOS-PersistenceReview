@@ -40,6 +40,7 @@ class NasaImageViewController: UIViewController {
                                             ImageAPIClient.manager.loadImage(from: $0.url,
                                                                              completionHandler: {self.imageView.image = $0
                                                                                 self.imageView.setNeedsLayout()
+                                                                                UserDefaultsHelper.manager.incrementNumberOfLoadedImages()
                                                                                 
                                             },
                                                                              errorHandler: {print($0)})
